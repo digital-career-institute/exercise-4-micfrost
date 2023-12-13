@@ -1,0 +1,21 @@
+sudo apt update
+sudo apt upgrade
+sudo apt install mysql-server
+sudo apt install mysql-client
+mysql --version
+sudo service mysql start
+sudo service mysql stop
+sudo service mysql restart
+sudo mysql
+CREATE DATABASE mydb;
+CREATE USER 'micfro'@'%' IDENTIFIED BY 'root';
+GRANT ALL ON mydb.* to 'micfro'@'%';
+SHOW GRANTS FOR 'micfro'@'%';
+CREATE DATABASE mydb;
+CREATE TABLE Employee (id INT, name VARCHAR(30), salary INT);
+INSERT INTO Employee (id, name, salary) VALUES (1,'ram',20000);
+SELECT count(*) AS TOTALNUMBEROFTABLES FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'mydb';
+SELECT COUNT(*) FROM information_schema.SCHEMATA
+SELECT * FROM name;
+"SELECT COUNT(*) FROM tableName;
+ALTER TABLE nameOld RENAME TO nameNew;
